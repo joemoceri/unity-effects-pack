@@ -1,16 +1,16 @@
-about {
+home {
 
-  #about {
+  #home {
     background-color: #fff;
     width: 100%;
     background-size: cover;
 
-    #about-form-wrapper {
+    #home-form-wrapper {
       flex: 1 0 auto !important;
       -webkit-flex: 1 0 auto !important;
       justify-content: flex-start !important;
 
-      #about-form {
+      #home-form {
 
         mat-icon {
           color: #8e7bff;
@@ -28,7 +28,7 @@ about {
     }
   }
 
-  .about-photo {
+  .home-photo {
     max-width: 512px;
   }
 }

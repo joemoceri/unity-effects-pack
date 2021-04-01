@@ -4,12 +4,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-    selector     : 'about',
-    templateUrl  : './about.component.html',
-    styleUrls    : ['./about.component.scss'],
+    selector     : 'home',
+    templateUrl  : './home.component.html',
+    styleUrls    : ['./home.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class AboutComponent implements OnInit
+export class HomeComponent implements OnInit
 {
     constructor(
         private router: Router
