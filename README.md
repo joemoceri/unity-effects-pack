@@ -1,2 +1,0 @@
-# unity-effects-pack
-TBD
