@@ -3,13 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Router } from '@angular/router';
 
-declare var unityCreateInstance: any; //from 'unityCreateInstance';
-
-// <script src="Build/demo.loader.js"></script>
-// <script src = "Build/demo.framework.js.gz"></script>
-
-//import * as unityJs from 'C:/Users/jmoce/source/repos/unity-effects-pack/src/assets/demo/Build/demo.loader.js';
-
 @Component({
     selector     : 'demo',
     templateUrl  : './demo.component.html',
@@ -29,9 +22,9 @@ export class DemoComponent implements OnInit
 
     var buildUrl = "assets/demo/Build";
     var config = {
-      dataUrl: buildUrl + "/demo.data.gz",
-      frameworkUrl: buildUrl + "/demo.framework.js.gz",
-      codeUrl: buildUrl + "/demo.wasm.gz",
+      dataUrl: buildUrl + "/demo.data",
+      frameworkUrl: buildUrl + "/demo.framework.js",
+      codeUrl: buildUrl + "/demo.wasm",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "JoeMoceri",
       productName: "Unity Effects Pack",
