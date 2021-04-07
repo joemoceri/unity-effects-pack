@@ -10,9 +10,18 @@
                   <a [routerLink]="'/demo'">Demo</a>
                 </h1>
                 <h1>Unity Effects Pack Documentation</h1>
+                <h2>Overview</h2>
+                <p>Unity Effects Pack is an asset (.unitypackage) for Unity 2020+. It contains a series of effects that are prepended by AP such as APMove, APColor, etc. You can add these components to game objects and use them to apply things such as</p>
+                <ul>
+                  <li>Changing color of a game object over time using a curve to determine strength of movement.</li>
+                  <li>Moving objects on automated tracks (you can modify your inputs on the fly, the effects will apply the new modifications)</li>
+                  <li>Changing the alpha of a game object over time using a curve to determine strength for how to adjust it.</li>
+                </ul>
+                <p>See below for docs and visit the demo to see them in action.</p>
+
                 <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
                 <h2>AP Effect Base</h2>
-                <img src="assets\images\ap-color-component.PNG" style="width: 390px; height: 590px;" />
+                <img src="assets\images\ap-color-component.png" style="width: 390px; height: 590px;" />
                 <p>These effects are components can be applied to 2D and 3D game objects for a variety of transformations. See below.</p>
                 <h3>Base Properties (these are on all effects)</h3>
                 <ul>
@@ -64,13 +73,13 @@
                   <li><strong>Motion Type:</strong> Whether the movement should be absolute or relative.</li>
                   <li><strong>End Position:</strong> The end position to move the target to.</li>
                   <li><strong>Movement Type:</strong> The type of movement. Options are linear, circular, and sine. Linear means it will simply go there straight with the speed determined from the curve. Circular means it'll move in a circle towards it. Sine means it'll move like a sine curve towards it.</li>
-                  <li><strong>Movement Type Sine Oscillations:</strong>How many oscillations in the sine movement.</li>
-                  <li><strong>Movement Type Sine Amplitude:</strong>The amplitude of the sine movement.</li>
-                  <li><strong>Movement Type Sine Movement Direction:</strong>The direction the movement should be in. Options are positive and negative.</li>
-                  <li><strong>Movement Type Circular Starting Angle:</strong>At what angle should the movement be.</li>
-                  <li><strong>Movement Type Circular Radius:</strong>The radius for the circle.</li>
-                  <li><strong>Movement Type Circular Turns:</strong>How many turns for the circle.</li>
-                  <li><strong>Movement Type Sine|Circular Turns:</strong>How many turns for the circle.</li>
+                  <li><strong>Movement Type Sine Oscillations:</strong> How many oscillations in the sine movement.</li>
+                  <li><strong>Movement Type Sine Amplitude:</strong> The amplitude of the sine movement.</li>
+                  <li><strong>Movement Type Sine Movement Direction:</strong> The direction the movement should be in. Options are positive and negative.</li>
+                  <li><strong>Movement Type Circular Starting Angle:</strong> At what angle should the movement be.</li>
+                  <li><strong>Movement Type Circular Radius:</strong> The radius for the circle.</li>
+                  <li><strong>Movement Type Circular Turns:</strong> How many turns for the circle.</li>
+                  <li><strong>Movement Type Sine|Circular Turns:</strong> How many turns for the circle.</li>
                 </ul>
                 <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
                 <h2>APRotate</h2>
@@ -86,7 +95,7 @@
                 </ul>
                 <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
                 <h2>APScale</h2>
-                <img src="assets\images\ap-scale-component.PNG" style="width: 390px; height: 590px;" />
+                <img src="assets\images\ap-scale-component.png" style="width: 390px; height: 590px;" />
                 <p>APScale can be applied to any game object. It will scale it.</p>
                 <ul>
                   <li><strong>Pick Random Scale:</strong> Pick a random direction to scale in: x, y, z.</li>
@@ -96,7 +105,7 @@
                 </ul>
                 <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
                 <h2>APSquashStretch</h2>
-                <img src="assets\images\ap-squashstretch-component.PNG" style="width: 390px; height: 590px;" />
+                <img src="assets\images\ap-squashstretch-component.png" style="width: 390px; height: 590px;" />
                 <p>APSquashStretch can be applied to any game object. It will apply the animation principle of squashing and stretching using factors of density and stretchiness.</p>
                 <ul>
                   <li><strong>Curve:</strong> Positive determines the y squash. Negative determines the x squash.</li>
