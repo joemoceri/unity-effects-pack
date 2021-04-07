@@ -11,24 +11,98 @@
                 </h1>
                 <h1>Unity Effects Pack Documentation</h1>
                 <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
-                <h2>Color</h2>
-                <p>TODO</p>
-                <h2>Fade</h2>
-                <p>TODO</p>
-                <h2>Move</h2>
-                <p>TODO</p>
-                <h2>Progress Bar</h2>
-                <p>TODO</p>
-                <h2>Rotate</h2>
-                <p>TODO</p>
-                <h2>Scale</h2>
-                <p>TODO</p>
-                <h2>Scroll</h2>
-                <p>TODO</p>
-                <h2>SquashStretch</h2>
-                <p>TODO</p>
-                <h2>Typewriter</h2>
-                <p>TODO</p>
+                <h2>AP Effect Base</h2>
+                <img src="assets\images\ap-color-component.PNG" style="width: 390px; height: 590px;" />
+                <p>These effects are components can be applied to 2D and 3D game objects for a variety of transformations. See below.</p>
+                <h3>Base Properties (these are on all effects)</h3>
+                <ul>
+                  <li><strong>Target:</strong> This is which game object the component should select.</li>
+                  <li><strong>Use This Object:</strong> Whether to target the game object this component is on.</li>
+                  <li><strong>Random Start Delay:</strong> Whether to have a random start delay when the component plays on Start.</li>
+                  <li><strong>Random Length:</strong> Let the component pick a random length.</li>
+                </ul>
+                <h3>On Start</h3>
+                <ul>
+                  <li>
+                    <strong>Curve:</strong> The curve to use that will use it's normalized value to manipulate the effects (ease in / out of corners, straight, etc).
+                    Refer to tooltips for how they apply to each effect. NOTE: Curve will be normalized if it isn't between 0 and 1 inclusive.
+                  </li>
+                  <li><strong>Length:</strong> How long the effect should be.</li>
+                  <li><strong>Affect Children:</strong> Whether the effect should apply to children of the game object (some effects don't support this, like Color)</li>
+                  <li><strong>Continuous:</strong> Whether the effect should be continuous or not. This can be ping poing or loop.</li>
+                </ul>
+                <h3>Events</h3>
+                <p>Events can fire on either when the effect is running. You can have your custom event fire when a certain percentage changes, or when the effect finishes.</p>
+                <ul>
+                  <li><strong>Action:</strong> When to trigger the event. Options are Nothing, Play, and Reverse.</li>
+                  <li><strong>Event Type:</strong> What type of event. Options are On Change and On Finish.</li>
+                  <li><strong>Percentage:</strong> At what percentage to trigger the event.</li>
+                  <li><strong>E:</strong> The set of events.</li>
+                </ul>
+                <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
+                <h2>APColor</h2>
+                <img src="assets\images\ap-color-component.png" style="width: 390px; height: 590px;" />
+                <p>APColor can be applied to any game object that has a Graphic, SpriteRenderer or Renderer. It will then use the .color property or the shared materials color property. It can be used to gradient between multiple colors.</p>
+                <p>Does not support AffectChildren.</p>
+                <ul>
+                  <li><strong>Colors:</strong> An array of colors to pick from</li>
+                  <li><strong>Randomize Order:</strong> Whether to randomize the order each iteration.</li>
+                </ul>
+                <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
+                <h2>APFade</h2>
+                <img src="assets\images\ap-fade-component.png" style="width: 390px; height: 590px;" />
+                <p>APFade can be applied to any game object that has a Graphic, SpriteRenderer or Renderer. It will then use the .color property or the shared materials color property. It can be used to fade the alpha on a game object.</p>
+                <ul>
+                  <li><strong>Curve:</strong> 0 is 0% alpha. 1 is 100% alpha.</li>
+                </ul>
+                <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
+                <h2>APMove</h2>
+                <img src="assets\images\ap-move-component.png" style="width: 390px; height: 590px;" />
+                <p>APMove can be applied to any game object. It can take any object, give it an end position, and have the object move there.</p>
+                <ul>
+                  <li><strong>Curve:</strong> Determines the strength as a percentage of the movement from 0 to 1.</li>
+                  <li><strong>Motion Type:</strong> Whether the movement should be absolute or relative.</li>
+                  <li><strong>End Position:</strong> The end position to move the target to.</li>
+                  <li><strong>Movement Type:</strong> The type of movement. Options are linear, circular, and sine. Linear means it will simply go there straight with the speed determined from the curve. Circular means it'll move in a circle towards it. Sine means it'll move like a sine curve towards it.</li>
+                  <li><strong>Movement Type Sine Oscillations:</strong>How many oscillations in the sine movement.</li>
+                  <li><strong>Movement Type Sine Amplitude:</strong>The amplitude of the sine movement.</li>
+                  <li><strong>Movement Type Sine Movement Direction:</strong>The direction the movement should be in. Options are positive and negative.</li>
+                  <li><strong>Movement Type Circular Starting Angle:</strong>At what angle should the movement be.</li>
+                  <li><strong>Movement Type Circular Radius:</strong>The radius for the circle.</li>
+                  <li><strong>Movement Type Circular Turns:</strong>How many turns for the circle.</li>
+                  <li><strong>Movement Type Sine|Circular Turns:</strong>How many turns for the circle.</li>
+                </ul>
+                <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
+                <h2>APRotate</h2>
+                <img src="assets\images\ap-rotate-component.png" style="width: 390px; height: 590px;" />
+                <p>APRotate can be applied to any game object. It will rotate it.</p>
+                <ul>
+                  <li><strong>Curve:</strong> 1 is a 360 positive rotation. -1 is a 360 negative rotation.</li>
+                  <li><strong>Pick Random Rotation:</strong> Rotate x, y, or z.</li>
+                  <li><strong>Pick Random Direction:</strong> Rotate forwards or backwards.</li>
+                  <li><strong>X:</strong> Rotate X.</li>
+                  <li><strong>Y:</strong> Rotate Y.</li>
+                  <li><strong>Z:</strong> Rotate Z.</li>
+                </ul>
+                <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
+                <h2>APScale</h2>
+                <img src="assets\images\ap-scale-component.PNG" style="width: 390px; height: 590px;" />
+                <p>APScale can be applied to any game object. It will scale it.</p>
+                <ul>
+                  <li><strong>Pick Random Scale:</strong> Pick a random direction to scale in: x, y, z.</li>
+                  <li><strong>X:</strong> Scale X.</li>
+                  <li><strong>Y:</strong> Scale Y.</li>
+                  <li><strong>Z:</strong> Scale Z.</li>
+                </ul>
+                <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
+                <h2>APSquashStretch</h2>
+                <img src="assets\images\ap-squashstretch-component.PNG" style="width: 390px; height: 590px;" />
+                <p>APSquashStretch can be applied to any game object. It will apply the animation principle of squashing and stretching using factors of density and stretchiness.</p>
+                <ul>
+                  <li><strong>Curve:</strong> Positive determines the y squash. Negative determines the x squash.</li>
+                  <li><strong>Stretchiness:</strong> How much it get's pulled apart.</li>
+                  <li><strong>Denseness:</strong> How much remains after. The thickness of it.</li>
+                </ul>
                 <mat-divider style="border-top-width: 1px; border-top-color: #000;"></mat-divider>
               </div>
             </div>
