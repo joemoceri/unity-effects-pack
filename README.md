@@ -27,4 +27,4 @@ Clone / download the repository, navigate to Assets/unity-packages, and you'll f
 
 See below for the full docs and visit the demo to see them in action.
 
-[Doc/Demo](https://jmoceri34.github.io/unity-effects-pack/)
+[Doc/Demo](https://joemoceri.github.io/unity-effects-pack/)
