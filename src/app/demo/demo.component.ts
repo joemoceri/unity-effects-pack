@@ -22,9 +22,9 @@ export class DemoComponent implements OnInit
 
     var buildUrl = "assets/demo/Build";
     var config = {
-      dataUrl: buildUrl + "/demo.data",
-      frameworkUrl: buildUrl + "/demo.framework.js",
-      codeUrl: buildUrl + "/demo.wasm",
+      dataUrl: buildUrl + "/demo.data.gz",
+      frameworkUrl: buildUrl + "/demo.framework.js.gz",
+      codeUrl: buildUrl + "/demo.wasm.gz",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "JoeMoceri",
       productName: "Unity Effects Pack",
