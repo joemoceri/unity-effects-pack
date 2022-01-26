@@ -36,7 +36,7 @@
               "src/assets/demo/TemplateData/style.css"
             ],
             "scripts": [
-              "src/assets/demo/Build/demo.loader.js"
+              "src/assets/demo/Build/demo-gzip-compression.loader.js"
             ]
           },
           "configurations": {
@@ -103,7 +103,7 @@
               "src/assets/demo/TemplateData/style.css"
             ],
             "scripts": [
-              "src/assets/demo/Build/demo.loader.js"
+              "src/assets/demo/Build/demo-gzip-compression.loader.js"
             ]
           }
         },
